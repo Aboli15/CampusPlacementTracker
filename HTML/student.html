@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <style>
+body {
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* TOP ACTION BAR */
+    #student-button {
+      width: 90%;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 20px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    #student-button button {
+      padding: 10px 22px;
+      border: none;
+      border-radius: 25px;
+      background: white;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #student-button button:hover {
+      background: #667eea;
+      color: white;
+    }
+
+    #placement-status {
+      display: flex;
+      gap: 15px;
+    }
+
+    /* ===============================
+   STUDENT CONTAINER GRID
+================================ */
+#students-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ===============================
+   STUDENT CARD
+================================ */
+#student-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 16px 14px 56px; /* extra bottom space for buttons */
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+#student-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   PROFILE IMAGE
+================================ */
+#student-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2563eb;
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   TEXT STYLING
+================================ */
+#student-card h4 {
+    font-size: 14px;
+    margin: 4px 0;
+    color: #111827;
+}
+
+#student-card h5 {
+    font-size: 12px;
+    margin-top: 6px;
+    color: #374151;
+}
+
+/* ===============================
+   BUTTONS (HIDDEN INITIALLY)
+================================ */
+#student-card button {
+    position: absolute;
+    bottom: 12px;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Show buttons on hover */
+#student-card:hover button {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===============================
+   DELETE (LEFT)
+================================ */
+#student-card #delete {
+    right: 12px;
+    background-color: #ef4444;
+    color: white;
+}
+
+#student-card #delete:hover {
+    background-color: #b91c1c;
+}
+
+/* ===============================
+   EDIT (RIGHT)
+================================ */
+#student-card #edit {
+    left: 12px;
+    background-color: #2563eb;
+    color: white;
+}
+
+#student-card #edit:hover {
+    background-color: #1e40af;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <h1>Placement Tracker</h1>
+        <input type="search"  placeholder="Search.....">
+        <nav id="navlinks">
+            <a href="./index.html">Home</a>
+            <a href="">Colleges</a>
+            <a href="./student.html" class="active">Students</a>
+            <a href="">Companies</a>
+            <a href="">Job Roles</a>
+        </nav>
+    </header>
+    
+    <article id="student-button">
+         <button id="newStudent">Add new student</button>
+         <div id="placement-status">
+            <button id="placedStudents"> Placed</button>
+            <button id="notPlacedStudents">Not Placed</button>
+            <button id="allStudents">All Students</button>
+         </div>
+    </article>
+    <section id="students-container"></section>
+
+    <script src="../Js/api.js"></script>
+    <script src="../Js/student.js"></script>
+</body>
+</html>

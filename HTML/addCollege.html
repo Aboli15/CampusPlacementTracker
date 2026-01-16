@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css" />
+</head>
+<style>
+body {
+  background: #f2f6ff;
+}
+
+/* Compact Form Card */
+#collegeForm {
+  width: 780px;
+  margin: 20px auto;
+  padding: 20px 25px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Inputs & Select */
+#collegeForm input,
+#collegeForm select {
+  width: 32%;
+  padding: 9px 10px;
+  margin: 6px 0.5%;
+  border-radius: 7px;
+  border: 1px solid #d0d0d0;
+  font-size: 13px;
+  outline: none;
+  transition: 0.25s;
+}
+
+/* Focus */
+#collegeForm input:focus,
+#collegeForm select:focus {
+  border-color: #2962ff;
+  box-shadow: 0 0 5px rgba(41, 98, 255, 0.35);
+}
+
+/* File input */
+#profileimg {
+  width: 65%;
+}
+
+/* Section separators */
+#collegeForm hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 14px 0;
+}
+
+/* Full width fields */
+#department,
+#totalStudents {
+  width: 65%;
+}
+
+/* Submit button */
+#submit {
+  width: 35%;
+  margin: 14px auto 0;
+  display: block;
+  padding: 10px;
+  background: linear-gradient(135deg, #2962ff, #0039cb);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Placeholder style */
+#collegeForm input::placeholder {
+  color: #888;
+}
+
+</style>
+<body>
+    <header id="header">
+    <h1>Placement Tracker</h1>
+
+    <input type="search" placeholder="Search..." />
+
+    <nav id="navlinks">
+      <a href="#">Home</a>
+      <a href="#">Colleges</a>
+      <a href="./College.html">Students</a>
+      <a href="#">Companies</a>
+      <a href="#">Job Roles</a>
+    </nav>
+  </header>
+  <form id="collegeForm">
+    <input type="text" placeholder="Enter College Id" id="collegeId"><br>
+    <input type="text" placeholder="Enter College Name" id="name"/>
+    <select id="type">
+        <option>Select</option>
+        <option>Private</option>
+        <option>Government</option>
+    </select>
+    <br>
+    <br>
+    <input type="text" placeholder="Enter affiliated_to" id="affiliatedTo"/>
+    <input type="file" id="profileimg">
+    <br>
+    <br>
+    <input type="number" placeholder="Enter Established year" id="establishedYear">
+    <hr>
+    <input type="text" placeholder="Enter city" id="city">
+    <input type="text" placeholder="Enter state" id="state">
+    <br>
+    <br>
+    <input type="text" placeholder="Enter country" id="country">
+    <input type="number" placeholder="Enter pindoce" id="pindoce">
+    <hr>
+    <input type="text" placeholder="Enter Department" id="department">
+    <br>
+    <br>
+    <input type="number" placeholder="Enter Total Students" id="totalStudents">
+    <button id="submit">Submit</button>
+  </form>
+  <script src="../Js/addCollege.js"></script>
+</body>
+</html>

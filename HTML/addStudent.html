@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css" />
+</head>
+<style>
+#studentForm {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#studentForm input,
+#studentForm select {
+    width: 48%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+#studentForm input[type="date"],
+#studentForm input[type="file"] {
+    width: 100%;
+}
+
+#studentForm input:focus,
+#studentForm select:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 6px rgba(79, 70, 229, 0.4);
+}
+
+#studentForm input[type="file"] {
+    padding: 6px;
+}
+
+#studentForm br {
+    display: none;
+}
+
+#studentForm button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#studentForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.4);
+}
+
+</style>
+<body>
+    <header id="header">
+    <h1>Placement Tracker</h1>
+
+    <input type="search" placeholder="Search..." />
+
+    <nav id="navlinks">
+      <a href="#">Home</a>
+      <a href="#">Colleges</a>
+      <a href="./student.html">Students</a>
+      <a href="#">Companies</a>
+      <a href="#">Job Roles</a>
+    </nav>
+  </header>
+  <form id="studentForm">
+    <input type="text" placeholder="Enter Student Name" id="studentName"/>
+    <select id="studentGender">
+        <option>Select</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+    <br>
+    <br>
+    <input type="date" id="dob"/>
+    <input type="file" id="profileimg".>
+    <br>
+    <br>
+    <input type="text" placeholder="Enter College Id" id="collegeId">
+    <input type="text" placeholder="Enter Department" id="department">
+    <br>
+    <br>
+    <input type="text" placeholder="Enter Degree" id="degree">
+    <input type="number" placeholder="Enter Graduation year" id="graduation">
+    <br>
+    <br>
+    <input type="number" placeholder="Enter CGPA" id="cgpa">
+    <input type="number" placeholder="Enter Backlogs" id="backlogs">
+    <br><br>
+    <input type="text" placeholder="Enter Programming language" id="programing">
+    <input type="text" placeholder="Enter DataBase" id="database">
+    <br><br>
+    <input type="text" placeholder="Enter tools" id="tools">
+    <select id="placementStatus">
+        <option>Select</option>  
+        <option>Placed</option>
+        <option>Not Placed</option>
+    </select>
+    <br><br>
+    <button>Submit</button>
+  </form>
+  <script src="../Js/addStudent.js"></script>
+</body>
+</html>

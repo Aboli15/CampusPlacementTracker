@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    
+    
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* background-color: white; */
+            font-family: Arial, sans-serif;
+        }
+        input,select{
+            height: 30px;
+            width: 250px;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <h1>Placement Tracker</h1>
+        <input type="search"  placeholder="Search.....">
+        <nav id="navlinks">
+            <a href="./index.html" class="active">Home</a>
+            <a href="">Colleges</a>
+            <a href="./students.html">Students</a>
+            <a href="">Companies</a>
+            <a href="">Job Roles</a>
+        </nav>
+    </header>
+
+    <form id="studentForm">
+        <input type="text" placeholder="Enter Student Nmae" id="studentName"/>
+        <select  id="studentGender">
+            <option >Male</option>
+            <option >Female</option>
+        </select>
+        <br><br>
+        <input type="date" id="dob">
+        <input type="file" id="profileimg">
+        <br><br>
+        <input type="text" placeholder="Enter College ID" id="collegeId">
+        <input type="text" placeholder="Enter Department" id="department">
+        <br><br>
+        <input type="text" placeholder="Enter Degree" id="degree">
+        <input type="number" placeholder="Enter Graduation Year" id="graduation">
+        <br><br>
+        <input type="number" placeholder="Enter CGPA" id="cgpa">
+        <input type="number" placeholder="Enter Backlogs" id="backlogs">
+        <br><br>
+        <input type="text" placeholder="Enter Programming Languages" id="programing">
+        <input type="text" placeholder="Enter Data Base" id="database">
+        <br><br>
+        <input type="text" placeholder="Enter Tools" id="tools">
+        <select  id="placementStatus">
+            <option >Placed</option>
+            <option >Not Placed</option>
+        </select>
+ 
+        <button>Submit</button>
+
+        <script src="../JS/editStudent.js"></script>
+
+</body>
+</html>

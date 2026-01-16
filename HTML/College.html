@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css"/>
+    <link rel="stylesheet" href="../CSS/college.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Placement Tracker</h1>
+        <input type="search"  placeholder="Search.....">
+        <nav id="navlinks">
+            <a href="./index.html">Home</a>
+            <a href="./College.html" class="active">Colleges</a>
+            <a href="">Students</a>
+            <a href="">Companies</a>
+            <a href="">Job Roles</a>
+        </nav>
+    </header>
+    <article id="college-button">
+         <button id="newCollege">Add new college</button>
+         <div id="collegeType">
+            <button id="Private">Private</button>
+            <button id="Government">Government</button>
+            <button id="allColleges">All Colleges</button>
+         </div>
+    </article>
+    <section id="colleges-container"></section>
+    <script src="../Js/api.js" ></script>
+    <script src="../Js/College.js"></script>
+</body>
+</html>

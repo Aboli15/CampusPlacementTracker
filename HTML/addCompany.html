@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+<style>
+    /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Page background */
+body {
+    background: linear-gradient(135deg, #f4f7fb, #e3ebf5);
+    min-height: 100vh;
+}
+
+/* Form container */
+#companyForm {
+    background: #ffffff;
+    width: 420px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Inputs & Select */
+#companyForm input,
+#companyForm select {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+/* Focus effect */
+#companyForm input:focus,
+#companyForm select:focus {
+    outline: none;
+    border-color: #1abc9c;
+    box-shadow: 0 0 0 2px rgba(26, 188, 156, 0.2);
+}
+
+/* Labels (Paragraphs) */
+#companyForm p {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+/* Location group styling */
+#companyForm input#city,
+#companyForm input#state,
+#companyForm input#country {
+    width: 32%;
+    display: inline-block;
+}
+
+#companyForm input#state,
+#companyForm input#country {
+    margin-left: 2%;
+}
+
+/* Select dropdown */
+#companyForm select {
+    cursor: pointer;
+    background-color: #fff;
+}
+#companyForm {
+    margin: 50px auto 40px; /* space below header */
+}
+
+/* Optional submit button (if added later) */
+#companyForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+#companyForm button:hover {
+    background-color: #16a085;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    #companyForm {
+        width: 90%;
+    }
+
+    #companyForm input#city,
+    #companyForm input#state,
+    #companyForm input#country {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+</style>
+<body>
+    <header id="header">
+    <h1>Placement Tracker</h1>
+
+    <input type="search" placeholder="Search..." />
+
+    <nav id="navlinks">
+      <a href="#">Home</a>
+      <a href="#">Colleges</a>
+      <a href="./student.html">Students</a>
+      <a href="#">Companies</a>
+      <a href="#">Job Roles</a>
+    </nav>
+  </header>
+  <form id="companyForm">
+    <input type="text" placeholder="Enter Company Id" id="companyId">
+    <br>
+    <input type="text" placeholder="Enter Company Name" id="name">
+    <br>
+    <input type="text" placeholder="Enter Industry" id="industry">
+    <br>
+    <p>Hiring Status</p>
+    <select id="hiringStatus">
+        <option>Select</option>
+        <option>Active</option>
+        <option>Inactive</option>
+    </select>
+    <br>
+    <p>Eligible Batch</p>
+    <input type="text" placeholder="Enter year of passout" id="YOP">
+    <br>
+    <p>Location</p>
+    <input type="text" placeholder="Enter City" id="city">
+    <input type="text" placeholder="Enter State" id="state">
+    <input type="text" placeholder="Enter Country" id="country">
+     <button>Submit</button>
+  </form>
+  <script src="../Js/addCompany.js"></script>
+</body>
+</html>
