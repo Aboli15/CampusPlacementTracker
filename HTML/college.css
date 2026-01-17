@@ -1,0 +1,107 @@
+/* Page Background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* TOP ACTION BAR */
+    #college-button {
+      width: 90%;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 20px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    #college-button button {
+      padding: 10px 22px;
+      border: none;
+      border-radius: 25px;
+      background: white;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #college-button button:hover {
+      background: #667eea;
+      color: white;
+    }
+
+/* Colleges Grid */
+#colleges-container {
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* College Card */
+#colleges-card {
+    background: white;
+    padding: 60px 16px 20px; /* top space for image */
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    position: relative;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+#colleges-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Text */
+#colleges-card h4 {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Buttons (Initially Hidden) */
+#edit,
+#delete {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 8px 4px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+/* Show buttons on hover */
+#colleges-card:hover #edit,
+#colleges-card:hover #delete {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Edit Button */
+#edit {
+    background-color: #22c55e;
+    color: white;
+}
+
+/* Delete Button */
+#delete {
+    background-color: #ef4444;
+    color: white;
+}
+
+#edit:hover {
+    background-color: #16a34a;
+}
+
+#delete:hover {
+    background-color: #dc2626;
+}
